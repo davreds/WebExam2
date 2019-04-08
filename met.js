@@ -11,7 +11,7 @@ function getObjectID(keyword, callback){
                 callback("Error: Link is incorrect", undefined)
             } else {
                 if(body.total == 0){
-                    callback("Error: No objects match with the search criteria", undefined)
+                    callback("Error: No objects match the search criteria", undefined)
                 } else {
                     res = body.objectIDs[0]
                     callback(undefined, res)

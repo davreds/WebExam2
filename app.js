@@ -29,7 +29,7 @@ app.get('/met', function(req, res){
     res.setHeader('Access-Control-Allow-Origin', '*')
     if(!req.query.search){
         return res.send({
-            error: "Se debe ingresar un xxx para buscar"
+            error: "A search keyword must be provided"
         })
     }
     met.getObjectID(req.query.search, function(error, response){
