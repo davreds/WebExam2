@@ -29,7 +29,7 @@ app.get('/met', function(req, res){
     res.setHeader('Access-Control-Allow-Origin', '*')
     if(!req.query.search){
         return res.send({
-            error: "A search keyword must be provided"
+            error: "A search keyword must be provided."
         })
     }
     met.getObjectID(req.query.search, function(error, response){
@@ -60,7 +60,7 @@ app.get('/met', function(req, res){
 
 app.get('*', function(req, res){
     res.send({
-        error: "Esta ruta no existe."
+        error: "This path does not exist."
     })
 })
 
